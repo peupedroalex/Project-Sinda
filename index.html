@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <script src="js/echarts.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="materialize/css/materialize.css">
+	<link rel="stylesheet" href="materialize/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<title>Sinda</title>
+</head>
+<body>
+
+
+              <!-- NAVBAR -->
+              <nav>
+                <div class="nav-wrapper">
+                  <a href="#!" class="brand-logo center" id="logo">S I N D A</a>
+                  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
+                    
+                    <li><a href="#direct"><span>Sobre</span></a></li>
+                    <li><a href="badges.html"><span>Contato</span></a></li>
+                    <li><a href="collapsible.html"><span>Integrantes</span></a></li>
+                    <li><a href="mobile.html"><span>Github</span></a></li>
+                  </ul>
+                </div>
+              </nav>
+              <ul class="sidenav" id="mobile-demo">
+                <li><a href="sass.html">Sobre</a></li>
+                <li><a href="badges.html">Contato</a></li>
+                <li><a href="collapsible.html">Integrantes</a></li>
+                <li><a href="mobile.html">Github</a></li>
+              </ul>
+              <!-- FIM DO NAVBAR -->
+
+              
+              <div class="container">
+              <blockquote>
+                <b>Localização dos PCD's espalhados pelo Brasil</b>
+                <br>Para interagir e saber mais informações sobre os PCD's basta clicar no ícone.
+              </blockquote></div> 
+              
+            <!-- MAPA -->
+            <div id="map" class="container"></div>   
+             <!--FIM DO MAPA -->
+
+            <div class="container">
+                <div class="section">
+                    <h4></h4>
+                   <!-- <p>O SINDA (Sistema Integrado
+                        de Dados Ambientais) proporciona ao público os dados
+                        ambientais coletados por mais de 1000 plataformas terrestres
+                        (PCD) 2 e uma quinzena de plataformas aquáticas
+                        (boias) instaladas no território brasileiro. As plataformas
+                        de coleta enviam os dados via satélites para
+                        o “Centro de Missão que processa e repassa os dados
+                        dessas PCDs aos seus usuários. O SINDA constitui
+                        este Centro de Missão com a função de processamento,
+                        armazenamento e disseminação para os usuários, dos
+                        dados coletados remotamente pelas PCDs.”</p>
+                  </div>-->
+              </div>
+            </div> 
+            <div id="modal1" class="modal modal-fixed-footer">
+              <div class="modal-content">
+                <!-- Tabela com os dados-->
+                <table class="responsive-table">
+                  <thead>
+                      <tr>
+                          <th>Data - Hora</th>
+                          <th>Temperatura</th>
+                          <th>Umidade</th>
+                      </tr>
+                  </thead>
+           
+                  <tbody>
+                      <tr>
+                        <td>2017-11-07 - 12:00</td>
+                        <td>51.1</td>
+                        <td>0.144</td>
+                      </tr>
+                      <tr>
+                        <td>2017-11-07 - 15:00</td>
+                        <td>51.1</td>
+                        <td>2.244</td>
+                      </tr>
+                      <tr>
+                        <td>2017-11-07 - 18:00</td>
+                        <td>51.1</td>
+                        <td>1.5</td>
+                      </tr>
+                  </tbody>
+                </table>
+                <br>
+                <!-- Tabela com os dados-->
+
+                <!--Aqui começa o gráfico-->
+                <div id="maingraph" style="width: 300px;height:200px;"></div>
+                  <!-- Aqui termina o gráfico-->
+              </div>
+              <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+              </div>
+            </div>
+              <!--PARALLAX-->
+
+              <div class="parallax-container">
+                  <div class="parallax"><img src="http://sinda.crn.inpe.br/PCD/SITE/novo/site/img/1.jpg"></div>
+                </div>
+                <div class="section white" id="direct" >
+                  <div class="row container" id="">
+                    <!--<h2 class="header">Parallax</h2>
+                    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>-->
+                    <ul class="collapsible">
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">place</i>O que é o Sinda?</div>
+                        <div class="collapsible-body"><span>O SINDA (Sistema Integrado de Dados Ambientais) 
+                          proporciona ao público os dados ambientais coletados por mais de 1000 plataformas 
+                          terrestres (PCD) 2 e uma quinzena de plataformas aquáticas (boias) instaladas no 
+                          território brasileiro. As plataformas de coleta enviam os dados via satélites para 
+                          o “Centro de Missão que processa e repassa os dados dessas PCDs aos seus usuários. 
+                          O SINDA constitui este Centro de Missão com a função de processamento, armazenamento
+                          e disseminação para os usuários, dos dados coletados remotamente pelas PCDs.”</span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">wifi_tethering</i>Como esses dados são obtidos?</div>
+                        <div class="collapsible-body"><span>Os dados são obtidos com o auxílio de PCD's. Uma Plataforma de coleta 
+                          de dados (PCD) é um dispositivo automatizado que dispõe de sensores eletrônicos capazes de medir diversas 
+                          variáveis ambientais, tais como precipitação, pressão atmosférica, radiação solar, temperatura, umidade do ar,
+                          ponto de orvalho, direção e velocidade do vento, detecção da variação dos níveis de corpos de água, entre outros 
+                          diversos itens.</span></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header"><i class="material-icons">timeline</i>Por que o projeto foi realizado?</div>
+                        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="parallax-container">
+                  <div class="parallax"><img src="http://www.winwallpapers.net/w1/2011/08/Brazil-Landscapes.jpg"></div>
+              </div>
+
+              <!--FIM PARALLAX-->
+              <!-- RODAPÉ -->
+
+              <footer class="page-footer green darken-2">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col l6 s12">
+                        <h5 class="white-text">SINDA PROJECT V2</h5>
+                        <p class="grey-text text-lighten-4">Desenvolvido por estudantes da UNIFACS - Laureate</p>
+                      </div>
+                      <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Nosso canais</h5>
+                        <ul id="ul-footer">
+                          <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                          <li><a class="grey-text text-lighten-3" href="#!">Linkedin</a></li>
+                          <li><a class="grey-text text-lighten-3" href="#!">Github</a></li>
+                          <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                 
+                </footer>
+
+	<!---SCRIPTS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./materialize/js/materialize.min.js"></script>
+  <script src="./js/echarts.min.js"></script>
+  <script src="./js/index.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfQ0d-JsC--a4JPAZfat9v8M6kGcO6ESI&callback=initMap"
+    async defer></script>  
+  <!---SCRIPTS-->
+    
+</body>
+</html>
